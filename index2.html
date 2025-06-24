@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Toc-Toe(Front_page)</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body id="body1">
+    <div id="front">
+        <h1> ------WELCOME TO TIC-TOC-TOE GAME------</h1>
+        <br/>
+        <h2 id="h1">Enter 1st Player Name:-</h2>
+        <input type="text" id="name1" placeholder= "Enter 1st Player Name:-"/>
+        <br/>
+        <h2 id="h2">Enter 2nd Player Name:-</h2>
+        <input type="text" id="name2" placeholder="Enter 2nd Player Name:-"/>
+        <br/>
+        <a href=" index.html">
+            <button id="btn1"> <b>Start</b></button>
+        </a>
+        
+        <script>
+    document.getElementById("btn1").addEventListener("click", function() {
+    const name1 = document.getElementById("name1").value;
+    const name2 = document.getElementById("name2").value;
+    localStorage.setItem("player1", name1);
+    localStorage.setItem("player2", name2);
+    window.location.href = "index.html";
+});
+
+        </script>
+
+    </div>
+</body>
+</html>
